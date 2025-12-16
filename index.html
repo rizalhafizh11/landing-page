@@ -1,18 +1,277 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rizal Hafizh — Portfolio</title>
+  <meta name="description" content="Landing page portfolio sederhana: tentang saya, skill, project, dan kontak." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <main class="container">
-    <h1>Halo, ini landing page saya 🚀</h1>
-    <p>Deploy pertama di Vercel berhasil.</p>
-    <button id="btn">Klik saya</button>
-    <p id="msg"></p>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Rizal Hafizh</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Toggle theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile" id="mobileMenu" hidden>
+      <a class="mobile__link" href="#about">About</a>
+      <a class="mobile__link" href="#skills">Skills</a>
+      <a class="mobile__link" href="#projects">Projects</a>
+      <a class="mobile__link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="pill">Web & Mobile Developer</p>
+          <h1 class="hero__title">
+            Bangun website yang cepat, rapi, dan siap dipakai bisnis.
+          </h1>
+          <p class="hero__subtitle">
+            Saya fokus di front-end dan landing page yang conversion-friendly.
+            Di bawah ini ada skill, contoh project, dan cara menghubungi saya.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#projects">Lihat Projects</a>
+            <a class="btn btn--ghost" href="#contact">Hubungi Saya</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__num">⚡</div>
+              <div class="stat__text">Fast & Responsive</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">🧩</div>
+              <div class="stat__text">Clean Code</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">🚀</div>
+              <div class="stat__text">Deploy Vercel</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card" aria-label="Profile card">
+          <div class="card">
+            <div class="card__top">
+              <div class="avatar" aria-hidden="true">RH</div>
+              <div>
+                <div class="card__name">Rizal Hafizh</div>
+                <div class="card__role">Web & Mobile Developer</div>
+              </div>
+            </div>
+            <div class="card__body">
+              <p>
+                Lagi membangun portfolio dan kumpulin project. Target: konsisten bikin
+                landing page & web app kecil yang real dipakai.
+              </p>
+              <ul class="chiplist">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">Git</li>
+              </ul>
+            </div>
+            <div class="card__footer">
+              <a class="btn btn--small" href="#contact">Let's work</a>
+              <a class="btn btn--small btn--ghost" href="#projects">Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="glow" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <h2>About</h2>
+          <p>Perkenalan singkat. (Bisa kamu ubah bebas.)</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Siapa saya?</h3>
+            <p>
+              Saya Rizal Hafizh. Saya suka bikin UI yang simpel tapi elegan,
+              fokus ke pengalaman user dan hasil yang cepat online.
+            </p>
+            <p class="muted">
+              Tips: isi bagian ini dengan 3 hal: (1) kamu siapa, (2) kamu bikin apa,
+              (3) kamu bantu siapa.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>Yang saya tawarkan</h3>
+            <ul class="list">
+              <li>Landing page bisnis / personal branding</li>
+              <li>Perbaikan UI + responsive layout</li>
+              <li>Deploy + setup GitHub & Vercel</li>
+            </ul>
+            <p class="muted">
+              Kalau nanti kamu punya layanan lebih banyak, tinggal tambah itemnya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <h2>Skills</h2>
+          <p>Skill utama yang sering dipakai.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skill">
+            <div class="skill__top">
+              <span>HTML</span><span class="muted">Semantik</span>
+            </div>
+            <div class="bar"><span style="width: 90%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>CSS</span><span class="muted">Layout & responsive</span>
+            </div>
+            <div class="bar"><span style="width: 85%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>JavaScript</span><span class="muted">DOM & logic</span>
+            </div>
+            <div class="bar"><span style="width: 75%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__top">
+              <span>Git</span><span class="muted">Commit & push</span>
+            </div>
+            <div class="bar"><span style="width: 70%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <h2>Projects</h2>
+          <p>Contoh project. Nanti tinggal ganti judul + link + deskripsi.</p>
+        </div>
+
+        <div class="cards">
+          <article class="pcard">
+            <div class="pcard__tag">Landing</div>
+            <h3 class="pcard__title">Landing Page 01</h3>
+            <p class="pcard__desc">
+              Landing page sederhana: hero, about, skills, projects, contact.
+            </p>
+            <div class="pcard__actions">
+              <a class="btn btn--small" href="#" onclick="return false;">Live Demo</a>
+              <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Source</a>
+            </div>
+          </article>
+
+          <article class="pcard">
+            <div class="pcard__tag">UI</div>
+            <h3 class="pcard__title">UI Practice</h3>
+            <p class="pcard__desc">
+              Kumpulan latihan UI yang clean dan responsive.
+            </p>
+            <div class="pcard__actions">
+              <a class="btn btn--small" href="#" onclick="return false;">Live Demo</a>
+              <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Source</a>
+            </div>
+          </article>
+
+          <article class="pcard">
+            <div class="pcard__tag">Web</div>
+            <h3 class="pcard__title">Mini Web App</h3>
+            <p class="pcard__desc">
+              Project kecil untuk latihan JavaScript dan struktur folder.
+            </p>
+            <div class="pcard__actions">
+              <a class="btn btn--small" href="#" onclick="return false;">Live Demo</a>
+              <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p>Isi kontak kamu di sini (WA/email/IG).</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Kontak cepat</h3>
+            <p class="muted">Ganti link-link ini dengan punyamu.</p>
+            <div class="contact">
+              <a class="link" href="mailto:emailkamu@example.com">emailkamu@example.com</a>
+              <a class="link" href="https://github.com/rizalhafizh11" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="#" onclick="return false;">WhatsApp</a>
+            </div>
+          </div>
+
+          <form class="panel form" onsubmit="return false;">
+            <h3>Kirim pesan (dummy)</h3>
+            <label>
+              Nama
+              <input type="text" placeholder="Nama kamu" />
+            </label>
+            <label>
+              Pesan
+              <textarea rows="4" placeholder="Tulis pesan..."></textarea>
+            </label>
+            <button class="btn" type="submit">Kirim</button>
+            <p class="muted tiny">Form ini belum terkirim ke email (nanti bisa dibuat).</p>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Rizal Hafizh. Built with HTML/CSS/JS.</p>
+      <button class="toTop" id="toTop" type="button" aria-label="Back to top">↑</button>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
